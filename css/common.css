@@ -3,16 +3,16 @@
   font-family: "SUIT", sans-serif;
 }
 :root {
-  --point: "#FF3D34";
-  --primary: "#FF534B";
-  --secondary: "#FF6B65";
-  --background: "#FCF6F6";
-  --fontColor-b: "#090504";
-  --fontColor-w: "#fff";
+  --point: #ff3d34;
+  --primary: #ff534b;
+  --secondary: #ff6b65;
+  --background: #fcf6f6;
+  --fontColor-b: #090504;
+  --fontColor-w: #ffffff;
 }
 /* padding */
-.p-54{
-  margin: 0 54px ;
+.p-54 {
+  margin: 0 54px;
 }
 /* 48px */
 .suit_el_xl {
