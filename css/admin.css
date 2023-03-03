@@ -19,7 +19,7 @@ body {
     height: auto;
 }
 .background {
-    background-color: #fff;
+    background-color: var(--fontColor-w);
     width: 1671px;
     height: 890px;
     border-radius: 25px;
@@ -30,7 +30,7 @@ body {
 .m-bg {
     width: 268px;
     height: 823px;
-    background-color: #ff534b;
+    background-color: var(--primary);
     border-radius: 20px;
     position: absolute;
     bottom: 0;
@@ -50,11 +50,11 @@ body {
     padding-left: 55px;
 }
 .m-dash > li.clicks {
-    background-color: #fff;
+    background-color: var(--fontColor-w);
     /* line-height: 40px; */
 }
 .m-dash > li.clicks a {
-    color: #ff534b;
+    color: var(--primary);
 }
 
 .m-main li {
@@ -63,7 +63,7 @@ body {
 }
 .m-main li a,
 .logout a {
-    color: #fff;
+    color: var(--fontColor-w);
 }
 .m-main li a i,
 .m-main li a ion-icon {
@@ -75,7 +75,7 @@ body {
     bottom: 81px;
     width: 235px;
     height: 219px;
-    background-color: #fff;
+    background-color: var(--fontColor-w);
     border-radius: 25px;
     left: 16px;
     line-height: 27px;
