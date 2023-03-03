@@ -1,0 +1,9 @@
+/* .background {
+  height: 1000px;
+} */
+h2:after {
+  content: "";
+  display: block;
+  width: 1380px;
+  border-bottom: 1px solid #000;
+}
