@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teapot</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login_wrapper">
+      <div class="both">
+        <div class="up text-center d-flex justify-content-center">
+          <h1 class="logo">LOGO</h1>
+        </div>
+        <div class="down d-flex">
+          <div class="left d-flex justify-content-center">
+            <form action="login_ok.php" method="post" class="form_login">
+              <img src="" alt="" />
+              <h1 class="h3">LOGIN</h1>
+              <div class="form_login m-3">
+                <input
+                  type="text"
+                  class=""
+                  name="userid"
+                  id="userid"
+                  placeholder="ID"
+                />
+                <label for="userid">ID</label>
+              </div>
+              <div class="form_login m-3">
+                <input
+                  type="password"
+                  class=""
+                  name="passwd"
+                  id="passwd"
+                  placeholder="PASSWORD"
+                />
+                <label for="passwd">PASSWORD</label>
+              </div>
+              <ul class="find_wrap">
+                <li><a href="" class="find_text">ID 찾기</a></li>
+                <li><a href="" class="find_text">Password 찾기</a></li>
+                <li><a href="./join.html" class="find_text">회원가입</a></li>
+              </ul>
+              <button type="submit" class="btn_login">LOG IN</button>
+            </form>
+          </div>
+          <aside class="right d-flex justify-content-center align-items-center">
+            <img src="./img/bg_login1.png" alt="" />
+          </aside>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>
