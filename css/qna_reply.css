@@ -1,9 +1,25 @@
-/* .background {
-  height: 1000px;
-} */
+.background {
+  height: 100%;
+}
+.qna_reply {
+  margin-top: 66px;
+  margin-left: 140px;
+  width: 1380px;
+}
 h2:after {
   content: "";
   display: block;
   width: 1380px;
   border-bottom: 1px solid #000;
+  margin-top: 21px;
+}
+.user_question_info {
+  margin-top: 30px;
+}
+.classname,
+.reply_status {
+  color: #7d7d7d;
+}
+.question_title {
+  margin-top: 24px;
 }
