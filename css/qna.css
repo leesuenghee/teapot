@@ -1,3 +1,6 @@
+#dashboard .background .col-md-10 {
+  height: 100%;
+}
 .reply_status,
 .shortcuts {
   width: 120px;
@@ -6,6 +9,8 @@
   line-height: 40px;
   text-align: center;
   display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
 }
 .reply_status {
   color: #fff;
@@ -20,10 +25,16 @@
 .answer_complete {
   background: green;
 }
-tr {
-  align-items: center;
+td {
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
 }
-.m-dash > li {
-  padding-left: 0;
-  list-style: none;
+.qna {
+  width: 100%;
 }
+.qna h2 {
+  margin-bottom: 54px;
+}
+/* .table > :not(caption) > * > * {
+  border-bottom-width: 1px;
+} */
