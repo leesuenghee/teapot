@@ -1,0 +1,29 @@
+.reply_status,
+.shortcuts {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+}
+.reply_status {
+  color: #fff;
+}
+.shortcuts {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.answer_wait {
+  background: #7d7d7d;
+}
+.answer_complete {
+  background: green;
+}
+tr {
+  align-items: center;
+}
+.m-dash > li {
+  padding-left: 0;
+  list-style: none;
+}
