@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEAPOT | DashBoard</title>
+    <!-- <script
+      src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script> -->
+    <script
+      src="https://cdn.tiny.cloud/1/gqh4ln9h6t4kj4p3sdrfytsxhn047vp3h815f6ams4i2ou8j/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <script>
+      tinymce.init({ selector: "#mytextarea" });
+    </script>
+    <!-- tiny library -->
     <link rel="icon" href="../img/pabcon.png" />
     <link
       rel="stylesheet"
@@ -40,19 +52,31 @@
               <p class="reply_status suit_rg_m">답변대기</p>
             </div>
             <p class="question_title suit_rg_l">전치사 관련 질문입니다.</p>
-            <div>
-              <img src="" alt="" class="userphoto" />
-              <p class="userid">happyna97</p>
-              <p class="date">2023.03.16</p>
+            <div class="reply_info_border">
+              <div
+                class="reply_info suit_rg_m d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-5">
+                  <img src="" alt="" class="userphoto" />
+                  <p class="userid">happyna97</p>
+                </div>
+                <p class="date">2023.03.16</p>
+              </div>
             </div>
           </div>
           <div class="admin_aswer_form">
-            <img src="" alt="" class="adminphoto" />
-            <p class="adminid">관리자</p>
-            <p class="date">2023.03.16</p>
-            <textarea name="" id="" cols="30" rows="10">
-                여기는 라이브러리 이용할 예정
-            </textarea>
+            <div class="d-flex gap-5 align-items-center">
+              <img src="" alt="" class="adminphoto" />
+              <div class="admin_info">
+                <p class="adminid suit_rg_l">관리자</p>
+                <p class="date suit_rg_m">2023.03.16</p>
+              </div>
+            </div>
+            <div class="tiny_library">
+              <form method="post">
+                <textarea id="mytextarea">Hello, World!</textarea>
+              </form>
+            </div>
             <button type="submit" class="upload">등록</button>
             <button type="button" class="cancel">취소</button>
           </div>
