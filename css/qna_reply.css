@@ -44,6 +44,13 @@ h2:after {
 }
 .admin_aswer_form {
   margin-top: 50px;
+  background: var(--background);
+  border-radius: 10px;
+}
+.reply_admin_section {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 .admin_aswer_form .d-flex {
   margin-bottom: 30px;
@@ -52,7 +59,9 @@ h2:after {
   color: #7d7d7d;
 }
 .tiny_library {
+  width: 1300px;
   height: 598px;
   border-radius: 10px;
   background: #7d7d7d;
+  margin-bottom: 27px;
 }
