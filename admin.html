@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TEAPOT | DashBoard</title>
         <link rel="icon" href="../img/pabcon.png" />
-
+        <link rel="stylesheet" href="css/reset.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -26,70 +26,60 @@
         <link rel="stylesheet" href="css/admin.css" />
     </head>
     <body>
-        <div id="dashboard">
-            <div class="background">
-                <div class="m-bg">
-                    <ul class="m-main">
-                        <li class="logo">
-                            <a href=""><img src="../img/logo.png" alt="" /></a>
-                        </li>
-                        <li>
-                            <ul class="m-dash">
-                                <li>
-                                    <a href="" class="suit_rg_m">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="" class="suit_rg_m"
-                                        >회원관리<i class="fa-solid fa-user"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="" class="suit_rg_m"
-                                        >클래스 관리<i
-                                            class="fa-solid fa-book"
-                                        ></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="" class="suit_rg_m"
-                                        >이벤트 관리<i
-                                            class="fa-solid fa-cake-candles"
-                                        ></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="" class="suit_rg_m"
-                                        >쿠폰 관리<ion-icon
-                                            name="ticket-outline"
-                                        ></ion-icon
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="" class="suit_rg_m"
-                                        >Q&A<i
-                                            class="fa-regular fa-circle-question"
-                                        ></i
-                                    ></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="profile">
-                        <div>
-                            <img src="../img/charlie.png" alt="" />
-                            <p class="suit_rg_s">ID 관리자</p>
-                            <p class="suit_rg_s">PW 1234</p>
-                        </div>
-                    </div>
-                    <span class="logout"
-                        ><a href="" class="suit_rg_s"
-                            >logout<i
-                                class="fa-solid fa-arrow-right-from-bracket"
-                            ></i></a
-                    ></span>
-                </div>
+          <div id="dashboard">
+      <div class="background d-flex flex-column row">
+        <div class="col-md-2">
+          <div class="logo">
+            <a href=""><img src="img/logo.png" alt="teapot" /></a>
+          </div>
+          <div class="m-bg">
+            <ul class="m-dash d-flex flex-column">
+              <li>
+                <a href="" class="suit_rg_m">Dashboard</a>
+              </li>
+              <li>
+                <a href="" class="suit_rg_m"
+                  >회원관리<i class="fa-solid fa-user"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" class="suit_rg_m"
+                  >클래스 관리<i class="fa-solid fa-book"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" class="suit_rg_m"
+                  >이벤트 관리<i class="fa-solid fa-cake-candles"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" class="suit_rg_m"
+                  >쿠폰 관리<ion-icon name="ticket-outline"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="qna_list.html" class="suit_rg_m"
+                  >Q&A<i class="fa-regular fa-circle-question"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="profile">
+              <div>
+                <img src="img/charlie.png" alt="" />
+                <p class="suit_rg_s">ID 관리자</p>
+                <p class="suit_rg_s">PW 1234</p>
+              </div>
             </div>
+            <span class="logout">
+              <a href="" class="suit_rg_s"
+                >logout<i class="fa-solid fa-arrow-right-from-bracket"></i
+              ></a>
+            </span>
+          </div>
         </div>
+      </div>
+    </div>  
+      
         <script
             src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
