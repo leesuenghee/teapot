@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="../css/common.css" />
         <link rel="stylesheet" href="../css/admin.css" />
         <link rel="stylesheet" href="../css/dashboard.css" />
-        <link rel="stylesheet" href="../css/class_main.css" />
+        <link rel="stylesheet" href="../css/lec.css" />
     </head>
     <body>
         <div id="dashboard">
@@ -89,234 +89,108 @@
                         ></span>
                     </div>
                 </div>
+                <!-- aside끝 각 컨텐츠작업분 -->
                 <section class="col-10 align-self-center ms-5">
-                    <div class="class_top d-flex row">
-                        <h2 class="col-md-4 suit_bold_xl">클래스 관리</h2>
-                        <div class="class_top_etc col-md-8">
-                            <div class="class_R_top d-flex">
-                                <ul class="class_t_search">
-                                    <li class="category">
-                                        제목
-                                        <a href="">
-                                            <i
-                                                class="fa-solid fa-caret-down"
-                                            ></i>
-                                        </a>
+                    <div class="lec_content">
+                        <div class="lec_main_head row">
+                            <div class="lec_main_lhead col">
+                                <h2 class="col-md-4 suit_bold_xl">강의 관리</h2>
+                            </div>
+                            <div
+                                class="lec_main_rhead col d-flex justify-content-end"
+                            >
+                                <button class="btn_l">+ 강의등록</button>
+                            </div>
+                        </div>
+                        <div class="lec_main_cont">
+                            <div class="conhead row">
+                                <div class="conhead_title col">
+                                    <p class="suit_rg_m">
+                                        [중급] 여행 회화 - 프로 여행러들을 위한
+                                        원어민 회화
+                                    </p>
+                                </div>
+                                <div
+                                    class="conhead_sort col d-flex justify-content-end suit_rg_s"
+                                >
+                                    조회수순 | 회차순
+                                </div>
+                            </div>
+                            <div class="lec_main_conbody">
+                                <ul>
+                                    <li class="d-flex">
+                                        <p class="conbody_title col suit_rg_m">
+                                            제1강 Basic English Grammar
+                                        </p>
+                                        <p
+                                            class="conbody_mod suit_rg_s col d-flex justify-content-end align-item-center"
+                                        >
+                                            <span class="lec_hit"
+                                                >조회수 15</span
+                                            >
+                                            <span>수정</span>
+                                            <span>삭제</span>
+                                        </p>
                                     </li>
-                                    <li class="categorys">
-                                        <ul>
-                                            <li>제목</li>
-                                            <li>키워드</li>
-                                        </ul>
+                                    <li class="d-flex">
+                                        <p class="conbody_title col suit_rg_m">
+                                            제1강 Basic English Grammar
+                                        </p>
+                                        <p
+                                            class="conbody_mod suit_rg_s col d-flex justify-content-end align-item-center"
+                                        >
+                                            <span class="lec_hit"
+                                                >조회수 15</span
+                                            >
+                                            <span>수정</span>
+                                            <span>삭제</span>
+                                        </p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <p class="conbody_title col suit_rg_m">
+                                            제1강 Basic English Grammar
+                                        </p>
+                                        <p
+                                            class="conbody_mod suit_rg_s col d-flex justify-content-end align-item-center"
+                                        >
+                                            <span class="lec_hit"
+                                                >조회수 15</span
+                                            >
+                                            <span>수정</span>
+                                            <span>삭제</span>
+                                        </p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <p class="conbody_title col suit_rg_m">
+                                            제1강 Basic English Grammar
+                                        </p>
+                                        <p
+                                            class="conbody_mod suit_rg_s col d-flex justify-content-end align-item-center"
+                                        >
+                                            <span class="lec_hit"
+                                                >조회수 15</span
+                                            >
+                                            <span>수정</span>
+                                            <span>삭제</span>
+                                        </p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <p class="conbody_title col suit_rg_m">
+                                            제1강 Basic English Grammar
+                                        </p>
+                                        <p
+                                            class="conbody_mod suit_rg_s col d-flex justify-content-end align-item-center"
+                                        >
+                                            <span class="lec_hit"
+                                                >조회수 15</span
+                                            >
+                                            <span>수정</span>
+                                            <span>삭제</span>
+                                        </p>
                                     </li>
                                 </ul>
-                                <form action="">
-                                    <div class="searchs">
-                                        <input type="text" class="search" />
-                                        <button class="btn">
-                                            <i
-                                                class="fa-solid fa-magnifying-glass"
-                                            ></i>
-                                        </button>
-                                    </div>
-                                </form>
-                                <button class="btn_l">&#43;클래스등록</button>
                             </div>
-                            <ul class="class_R_top m27 d-flex">
-                                <li class="select_list">좋아요</li>
-                                <li>&#124;</li>
-                                <li class="select_list">전체공개강의</li>
-                            </ul>
                         </div>
-                    </div>
-                    <div class="class_mid ms-5">
-                        <ul class="d-flex">
-                            <li class="class_row d-flex">
-                                <div class="thubnail">
-                                    <img
-                                        src="./img/class/thubmnail/thub_class01.jpg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="class_text ms-3">
-                                    <div class="tit_top d-flex row mb-3">
-                                        <h3 class="suit_rg_m col-md-8">
-                                            [중급] 여행 회화 - 프로 여행러들을
-                                            위한 원어민 회화
-                                        </h3>
-                                        <ul class="class_rate d-flex col-md-4">
-                                            <li class="d-flex">
-                                                <p class="level">강의수</p>
-                                                <div class="number">10</div>
-                                            </li>
-                                            <li class="d-flex">
-                                                <p class="level">
-                                                    중급_여행회화
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="txt_bot row">
-                                        <div class="sub_tit col-md-5">
-                                            <p class="suit_rg_s">
-                                                현지에서 살아남기 위한 영어!<br />
-                                                이거 하나만 알면 나도 현지인!
-                                            </p>
-                                        </div>
-                                        <ul class="class_btn d-flex col-md-7">
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >강의관리</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >수정</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >삭제</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="class_row d-flex">
-                                <div class="thubnail">
-                                    <img
-                                        src="./img/class/thubmnail/thub_class01.jpg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="class_text ms-3">
-                                    <div class="tit_top d-flex row mb-3">
-                                        <h3 class="suit_rg_m col-md-7">
-                                            [고급] 비즈니스 회화 - 일잘러들의
-                                            비밀무기
-                                        </h3>
-                                        <ul
-                                            class="class_rate d-flex busi col-md-5"
-                                        >
-                                            <li class="d-flex">
-                                                <p class="level">강의수</p>
-                                                <div class="number">15</div>
-                                            </li>
-                                            <li class="d-flex">
-                                                <p class="level">
-                                                    고급_비즈니스 회화
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="txt_bot row">
-                                        <div class="sub_tit col-md-5">
-                                            <p class="suit_rg_s">
-                                                매너 있고 센스 있는 비즈니스
-                                                회화,<br />
-                                                한끗 차이 회화로 직장에서 스탭
-                                                업!
-                                            </p>
-                                        </div>
-                                        <ul class="class_btn d-flex col-md-7">
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >강의관리</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >수정</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >삭제</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="class_row d-flex">
-                                <div class="thubnail">
-                                    <img
-                                        src="./img/class/thubmnail/thub_class01.jpg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="class_text ms-3">
-                                    <div class="tit_top d-flex row mb-3">
-                                        <h3 class="suit_rg_m col-md-8">
-                                            [초급] 일상 회화 - 짧은 문장으로
-                                            통하는 회화
-                                        </h3>
-                                        <ul class="class_rate d-flex col-md-4">
-                                            <li class="d-flex">
-                                                <p class="level">강의수</p>
-                                                <div class="number">20</div>
-                                            </li>
-                                            <li class="d-flex">
-                                                <p class="level">
-                                                    초급_일상회화
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="txt_bot row">
-                                        <div class="sub_tit col-md-6">
-                                            <p class="suit_rg_s">
-                                                짧은 단어! 짧은 시간! 많은
-                                                있어보임!<br />
-                                                바로 여기로 오세요!! 통하는
-                                                회화를 가르쳐드립니다
-                                            </p>
-                                        </div>
-                                        <ul class="class_btn d-flex col-md-6">
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >강의관리</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >수정</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn_m"
-                                                    >삭제</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pagination">
-                        <ul
-                            class="class_pg d-flex justify-content-center m54 align-items-center"
-                        >
-                            <li>
-                                <a class="suit_bold_m" href=""
-                                    ><i class="fa-solid fa-angles-left"></i
-                                ></a>
-                            </li>
-                            <li class>
-                                <a class="suit_bold_m PG_num click" href=""
-                                    >1</a
-                                >
-                            </li>
-                            <li><a class="suit_bold_m PG_num" href="">2</a></li>
-                            <li><a class="suit_bold_m PG_num" href="">3</a></li>
-                            <li>
-                                <a class="suit_bold_m" href=""
-                                    ><i class="fa-solid fa-angles-right"></i
-                                ></a>
-                            </li>
-                        </ul>
                     </div>
                 </section>
             </div>
