@@ -1,15 +1,18 @@
 #dashboard .background .col-md-10 {
   height: 100%;
 }
-td {
+table{
+  margin-top: 78px;
+}
+/* thead tr{
+  border-bottom: 1px solid #000;
+}
+tbody tr {
   line-height: 60px;
   border-bottom: 1px solid #ccc;
-}
-.qna {
-  width: 100%;
-}
-.qna h2 {
-  margin-bottom: 54px;
+} */
+tr {
+  line-height: 60px;
 }
 .reply_status,
 .shortcuts {

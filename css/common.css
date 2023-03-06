@@ -108,6 +108,14 @@
   background: #ff534b;
   color: #fff;
 }
+button a{
+  text-decoration: none;
+  color: var(--primary);
+}
+button a:hover{
+  background: #ff534b;
+  color: #fff;
+}
 
 /* optgroup */
 .category {

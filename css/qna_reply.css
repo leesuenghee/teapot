@@ -36,24 +36,34 @@ h2:after {
   border-radius: 50%;
   background: #7d7d7d;
 }
-.adminphoto {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: url(../img/charlie.png) no-repeat;
+.user_question{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin: 50px 27px 50px 27px;
 }
 .admin_aswer_form {
   margin-top: 50px;
+  margin-bottom: 50px;
   background: var(--background);
   border-radius: 10px;
 }
 .reply_admin_section {
+  width: 1320px;
   padding-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 30px;
+  padding-bottom: 30px;
+  padding-left: 27.5px;
 }
-.admin_aswer_form .d-flex {
+.admin_reply_title{
   margin-bottom: 30px;
+}
+.adminphoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url(../img/charlie.png) no-repeat center/cover;
+}
+.adminid{
+  margin-bottom: 8px;
 }
 .date {
   color: #7d7d7d;
@@ -62,6 +72,15 @@ h2:after {
   width: 1300px;
   height: 598px;
   border-radius: 10px;
-  background: #7d7d7d;
+  background: var(--fontColor-w);
   margin-bottom: 27px;
+}
+.tiny{
+padding: 20px;
+}
+.qna_btn{
+  margin-bottom: 0;
+}
+.admin_aswer_form .d-flex .qna_btn{
+  margin-bottom: 0px;
 }
