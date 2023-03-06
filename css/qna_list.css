@@ -38,3 +38,31 @@ tr {
 .answer_complete {
   background: green;
 }
+
+/* 페이지네이션 */
+.class_pg {
+  width: 100%;
+  gap: 40px;
+}
+.class_pg > li > a {
+  color: var(--point);
+  position: relative;
+  display: inline-block;
+  width: 23px;
+  height: 27px;
+  text-align: center;
+}
+.class_pg > li > .PG_num::after {
+  content: " ";
+  display: inline-block;
+  width: 23px;
+  border-bottom: 3px solid var(--point);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+.class_pg > li > .PG_num.click::after {
+  opacity: 1;
+}
