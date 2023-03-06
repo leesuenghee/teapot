@@ -1,10 +1,5 @@
-/* body {
-  overflow-y: hidden;
-} */
-
 #dashboard {
   width: 100%;
-  position: relative;
   height: auto;
 }
 
@@ -15,7 +10,6 @@
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   margin: 54px auto;
-  position: relative;
 }
 #dashboard .background .col-md-2 {
   padding-left: 0;
@@ -31,24 +25,22 @@
 }
 
 .logo {
-  margin: 13px 0 13px 47.5px; 
-  /* margin: 14px 0 13px 47.5px;  */
-  /* 바꾼부분 */
+  margin: 13px 0 13px 47.5px;
 }
 
 .m-dash {
   padding-top: 30px;
   gap: 2rem;
+  padding-left: 0;
 }
 .m-dash > li {
   padding-left: 55px;
-  /* text-decoration: none; */
-  /* padding-left: 30px; */
-  /* 바뀐부분 */
+
   line-height: 35px;
 }
 .m-dash > li a {
   color: var(--background);
+  text-decoration: none;
 }
 .m-dash > li.clicks {
   background-color: var(--fontColor-w);
@@ -57,7 +49,6 @@
 .m-dash > li.clicks a {
   color: var(--primary);
 }
-
 .m-main li {
   margin-bottom: 27px;
   line-height: 40px;
@@ -70,7 +61,6 @@
 .m-dash > li a ion-icon {
   margin-left: 20px;
 }
-
 .profile {
   position: absolute;
   bottom: 81px;
@@ -84,16 +74,15 @@
 .profile div {
   text-align: center;
 }
-
 .profile img {
   padding: 20px 0;
 }
-
 .logout a {
   position: absolute;
   bottom: 27px;
   text-align: center;
   width: 100%;
+  text-decoration: none;
 }
 .logout i {
   margin-left: 10px;
