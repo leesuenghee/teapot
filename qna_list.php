@@ -7,7 +7,6 @@
     <title>TEAPOT | DashBoard</title>
     <link rel="icon" href="../img/pabcon.png" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -35,7 +34,7 @@
       <div class="background d-flex flex-column row">
         <div class="col-md-2">
           <div class="logo">
-            <a href=""><img src="img/logo.png" alt="teapot" /></a>
+            <a href=""><img src="../img/logo.png" alt="teapot" /></a>
           </div>
           <div class="m-bg">
             <ul class="m-dash d-flex flex-column">
@@ -70,7 +69,7 @@
             </ul>
             <div class="profile">
               <div>
-                <img src="img/charlie.png" alt="" />
+                <img src="../img/charlie.png" alt="" />
                 <p class="suit_rg_s">ID 관리자</p>
                 <p class="suit_rg_s">PW 1234</p>
               </div>
@@ -107,7 +106,7 @@
                   <button
                     type="button"
                     class="shortcuts btn_m"
-                    onclick="location.href='qna_reply.html'"
+                    onclick="location.href='qna_reply.php'"
                   >
                     바로가기
                   </button>
@@ -124,7 +123,7 @@
                   <button
                     type="button"
                     class="shortcuts btn_m"
-                    onclick="location.href='qna_reply.html'"
+                    onclick="location.href='qna_reply.php'"
                   >
                     바로가기
                   </button>
@@ -141,7 +140,7 @@
                   <button
                     type="button"
                     class="shortcuts btn_m"
-                    onclick="location.href='qna_reply.html'"
+                    onclick="location.href='qna_reply.php'"
                   >
                     바로가기
                   </button>
@@ -158,7 +157,7 @@
                   <button
                     type="button"
                     class="shortcuts btn_m"
-                    onclick="location.href='qna_reply.html'"
+                    onclick="location.href='qna_reply.php'"
                   >
                     바로가기
                   </button>
@@ -175,7 +174,7 @@
                   <button
                     type="button"
                     class="shortcuts btn_m"
-                    onclick="location.href='qna_reply.html'"
+                    onclick="location.href='qna_reply.php'"
                   >
                     바로가기
                   </button>

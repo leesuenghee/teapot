@@ -5,41 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEAPOT | DashBoard</title>
-    <!-- <script
-      src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
-      referrerpolicy="origin"
-    ></script> -->
     <script
-      src="https://cdn.tiny.cloud/1/gqh4ln9h6t4kj4p3sdrfytsxhn047vp3h815f6ams4i2ou8j/tinymce/5/tinymce.min.js"
-      referrerpolicy="origin"
+    src="https://cdn.tiny.cloud/1/gqh4ln9h6t4kj4p3sdrfytsxhn047vp3h815f6ams4i2ou8j/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"
     ></script>
     <script>
       tinymce.init({ selector: "#mytextarea" });
-    </script>
-    <!-- tiny library -->
+      </script>
+    <!-- //tiny library -->
     <link rel="icon" href="../img/pabcon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../css/reset.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/admin.css" />
-    <!-- <link rel="stylesheet" href="../css/dashboard.css" /> -->
     <link rel="stylesheet" href="../css/qna_check.css" />
+
+    
   </head>
   <body>
     <div id="dashboard">
@@ -87,9 +84,9 @@
                 </p>
               </div>
               <div class="qna_btn d-flex gap-4 justify-content-end">
-                <button type="submit" class="list btn_s" onclick="location.href='qna_list.html'">목록</button>
-                <button type="submit" class="upload btn_s" onclick="location.href='qna_reply.html'">수정</button>
-                <button type="button" class="cancel btn_s">삭제</button>
+                <button type="submit" class="list btn_s" onclick="location.href='qna_list.php'">목록</button>
+                <button type="submit" class="upload btn_s" onclick="location.href='qna_reply.php'">수정</button>
+                <button type="button" class="cancel btn_s" >삭제</button>
               </div>
             </div>
           </div>
