@@ -1,54 +1,59 @@
 /* class 공통 */
-.m27{
+.m27 {
     margin: 27px 0px;
 }
-.m54{
+.m54 {
     margin: 54px 0px;
 }
-.mb54{
+.mb54 {
     margin-bottom: 54px;
 }
-a{
+a {
     color: var(--fontColor-b);
 }
-.btn_m{
+.btn_l > a {
+    color: var(--point);
+}
+.btn_l:hover a {
+    color: var(--fontColor-w);
+}
+.btn_m {
     line-height: 40px;
     text-align: center;
 }
-.categorys > ul > li{
+.categorys > ul > li {
     background-color: var(--fontColor-w);
 }
-.R_BR{
-    background: #FFFFFF;
-    border: 2px solid #FFBEBB;
+.R_BR {
+    background: #ffffff;
+    border: 2px solid #ffbebb;
     border-radius: 5px;
 }
 
 /* class 전체 */
-section.align-self-center{
+section.align-self-center {
     transform: translateY(10%);
+    box-sizing: border-box;
+    padding-left: 3rem;
 }
 
 /* class 관리 상단부 */
-.class_R_top{
-    gap:30px;
+.class_R_top {
+    gap: 30px;
     justify-content: flex-end;
     margin-right: 141px;
-
 }
-ul.class_R_top{
-    gap:15px;
+ul.class_R_top {
+    gap: 15px;
 }
-ul.class_R_top li.select_list{
+ul.class_R_top li.select_list {
     cursor: pointer;
 }
-.class_t_search{
-    position: relative;
-}
+
 /* /class 관리 상단부 */
 
 /* class 관리 중단부 */
-.class_mid > ul{
+.class_mid > ul {
     gap: 27px;
     flex-direction: column;
 }
@@ -63,15 +68,15 @@ ul.class_R_top li.select_list{
 }
 
 /* class tit */
-.class_text{
+.class_text {
     width: 75%;
 }
-.class_rate.d-flex{
+.class_rate.d-flex {
     justify-content: space-between;
     gap: 15px;
     align-items: center;
 }
-.class_rate li:before{
+.class_rate li:before {
     content: " ";
     display: block;
     width: 15px;
@@ -79,63 +84,44 @@ ul.class_R_top li.select_list{
     background-color: var(--point);
     border-radius: 25px;
 }
-.class_rate li{
-    gap:15px;
+.class_rate li {
+    gap: 15px;
 }
 
 /* only 비지니스 클래스 */
-.class_text .class_rate.busi{
+.class_text .class_rate.busi {
     justify-content: flex-end;
 }
 
 /* class sub tit */
-.sub_tit .suit_rg_s{
+.sub_tit .suit_rg_s {
     line-height: 27px;
 }
 
 /* class btn */
-.txt_bot > .class_btn{
+.txt_bot > .class_btn {
     gap: 30px;
     align-items: flex-end;
     justify-content: flex-end;
 }
 /* /class 관리 중단부 */
 
-/* 페이지네이션 */
-.class_pg{
-    width: 100%;
-    gap: 40px;
-}
-.class_pg > li > a{
-    color: var(--point);
-    position: relative;
-    display: inline-block;
-    width: 23px;
-    height: 27px;
-    text-align: center;
-}
-.class_pg > li > .PG_num::after{
-    content: " ";
-    display: inline-block;
-    width: 23px;
-    border-bottom: 3px solid var(--point);
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-}
-.class_pg > li > .PG_num.click::after {
-    opacity: 1;
-}
-
-
 /* 클래스 등록 */
-.class_subit_mid{
-    gap:72px;
+.class_subit_mid {
+    gap: 72px;
+    width: 1192px;
 }
 
-.class_submit_L{
+.class_submit_L {
     width: 597px;
-    gap:78px;
+    gap: 78px;
+}
+
+/* 강의 작성 */
+select option[value=""][disabled] {
+    display: none;
+}
+
+.class_submit_L > .R_BR {
+    width: 100%;
 }
