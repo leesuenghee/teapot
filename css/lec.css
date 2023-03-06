@@ -11,7 +11,6 @@
     margin-top: 54px;
 }
 .lec_main_cont {
-    height: 650px;
     padding-left: 114px;
 }
 .conhead {
@@ -24,7 +23,9 @@
 .conhead_sort {
     font-size: 20px;
 }
-
+.conhead_sort span:nth-child(2) {
+    margin: 0 17px;
+}
 .lec_main_conbody .conlist {
     margin-bottom: 54px;
 }
@@ -54,8 +55,9 @@
     background-color: var(--point);
     border-radius: 25px;
 }
-.lec_main_conbody ul li p span:nth-child(2) {
+.conlist li p span:nth-child(2) {
     margin-right: 15px;
+    color: var(--primary);
 }
 /* 페이지네이션 */
 .class_pg {
