@@ -15,6 +15,7 @@
     padding-left: 114px;
 }
 .conhead {
+    width: 100%;
     margin-bottom: 14px;
 }
 .conhead_title {
@@ -23,16 +24,24 @@
 .conhead_sort {
     font-size: 20px;
 }
-.lec_main_conbody ul li {
+
+.lec_main_conbody .conlist {
+    margin-bottom: 54px;
+}
+.conlist li {
     padding: 22px 25px 23px 21px;
     border-radius: 15px;
     box-shadow: 0 0 4px rgb(0 0 0 / 25%);
     margin-bottom: 27px;
+    line-height: 36px;
+}
+.conlist li:last-child {
+    margin-bottom: 0;
+}
+.conlist li p {
+    line-height: 36px;
 }
 
-.lec_main_conbody ul li p span {
-    line-height: 24px;
-}
 .lec_hit {
     margin-right: 36px;
 }
@@ -47,4 +56,31 @@
 }
 .lec_main_conbody ul li p span:nth-child(2) {
     margin-right: 15px;
+}
+/* 페이지네이션 */
+.class_pg {
+    width: 100%;
+    gap: 40px;
+}
+.class_pg > li > a {
+    color: var(--point);
+    position: relative;
+    display: inline-block;
+    width: 23px;
+    height: 27px;
+    text-align: center;
+}
+.class_pg > li > .PG_num::after {
+    content: " ";
+    display: inline-block;
+    width: 23px;
+    border-bottom: 3px solid var(--point);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+.class_pg > li > .PG_num.click::after {
+    opacity: 1;
 }
