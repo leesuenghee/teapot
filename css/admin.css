@@ -1,13 +1,14 @@
+
 * {
   font-family: "SUIT", sans-serif;
 }
 :root {
-  --point: "#FF3D34";
-  --primary: "#FF534B";
-  --secondary: "#FF6B65";
-  --background: "#FCF6F6";
-  --fontColor-b: "#090504";
-  --fontColor-w: "#fffff";
+  --point: #ff3d34;
+  --primary: #ff534b;
+  --secondary: #ff6b65;
+  --background: #fcf6f6;
+  --fontColor-b: #090504;
+  --fontColor-w: #ffffff;
 }
 body {
   background-color: var(--background);
@@ -19,42 +20,50 @@ body {
   height: auto;
 }
 .background {
-  background-color: #fff;
+  background-color: var(--fontColor-w);
   width: 1671px;
   height: 890px;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   /* position: absolute; */
   margin: 54px auto;
+  position: relative;
 }
 .m-bg {
   width: 268px;
   height: 823px;
-  background-color: #ff534b;
+  background-color: var(--primary);
   border-radius: 20px;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  /* bottom: 0; */
   /* text-align: left; */
+  margin-top: 0;
+}
+#dashboard .background .col-2 {
+  padding-left: 0;
 }
 
-.m-bg ul .logo {
-  position: absolute;
-  top: -54px;
-  left: 50px;
+.logo {
+  margin: 13px 0 12px 47.5px;
 }
 
 .m-dash {
   padding-top: 30px;
+  gap: 2rem;
 }
 .m-dash > li {
   padding-left: 55px;
+  line-height: 35px;
+}
+.m-dash > li a {
+  color: var(--background);
 }
 .m-dash > li.clicks {
-  background-color: #fff;
-  /* line-height: 40px; */
+  background-color: var(--fontColor-w);
+  line-height: 35px;
 }
 .m-dash > li.clicks a {
-  color: #ff534b;
+  color: var(--primary);
 }
 
 .m-main li {
@@ -63,11 +72,11 @@ body {
 }
 .m-main li a,
 .logout a {
-  color: #fff;
+  color: var(--fontColor-w);
 }
-.m-main li a i,
-.m-main li a ion-icon {
-  margin-left: 10px;
+.m-dash > li a i,
+.m-dash > li a ion-icon {
+  margin-left: 20px;
 }
 
 .profile {
@@ -75,10 +84,11 @@ body {
   bottom: 81px;
   width: 235px;
   height: 219px;
-  background-color: #fff;
+  background-color: var(--fontColor-w);
   border-radius: 25px;
   left: 16px;
   line-height: 27px;
+  /* margin-top: 100px; */
 }
 .profile div {
   text-align: center;
@@ -97,3 +107,4 @@ body {
 .logout i {
   margin-left: 10px;
 }
+
