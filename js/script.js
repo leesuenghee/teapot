@@ -1,3 +1,4 @@
+// 공통
 let categorys = $(".categorys");
 let dashMenu = $(".m-dash > li");
 
@@ -12,6 +13,8 @@ dashMenu.click(function (e) {
     dashMenu.removeClass("clicks");
     $(this).toggleClass("clicks");
 });
+
+// 클래스 관리
 
 tinymce.init({
     selector: "textarea",

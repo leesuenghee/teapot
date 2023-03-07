@@ -94,96 +94,108 @@
                     <div class="class_top d-flex row mb54">
                         <h2 class="col-md-4 suit_bold_xl">클래스 등록</h2>
                     </div>
-                    <div class="class_subit_mid ms-3 d-flex">
-                        <div class="class_submit_L col-md-6 d-flex row">
-                            <div class="DND R_BR col-md-6">
-                                <h3>이미지 등록</h3>
+                    <form action="" method="post" class="ms-3">
+                        <div class="class_subit_mid d-flex mb27">
+                            <div class="class_submit_L col-md-6 d-flex row">
+                                <div class="DND R_BR col-md-6 text-center">
+                                    <h3 class="suit_rg_m mb27">이미지 등록</h3>
+                                    <div class="img_DND row" id="box">
+                                        <i class="fa-solid fa-image m27"></i>
+                                        <p class="suit_rg_s">누르셔서 이미지를  올려서 이미지를 등록해주세요</p>
+                                        <div class="thumb"></div>
+                                    </div>
+                                </div>
+                                <div class="classprice R_BR col-md-6 text-center">
+                                    <h3 class="suit_rg_m mb27">금액</h3>
+                                    <ul class="class_price d-flex justify-content-center">
+                                        <li class="d-flex">
+                                            <label for="free" class="suit_rg_s price_btn click">무료</label
+                                            ><input
+                                                type="radio"
+                                                name="FNP"
+                                                id="free"
+                                            />
+                                            <label for="paid" class="suit_rg_s price_btn">유료</label
+                                            ><input
+                                                type="radio"
+                                                name="FNP"
+                                                id="paid"
+                                            />
+                                        </li>
+                                        <li>
+                                            <p class="suit_rg_s price_C_G">원</p>
+                                            <input type="text" name="" id="" class="class_p_txt"/>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="classprice R_BR col-md-6">
-                                <h3>금액</h3>
-                                <ul class="class_price">
-                                    <li>
-                                        <label for="free">무료</label
-                                        ><input
-                                            type="radio"
-                                            name="FNP"
-                                            id="free"
-                                        />
-                                        <label for="paid">유료</label
-                                        ><input
-                                            type="radio"
-                                            name="FNP"
-                                            id="paid"
-                                        />
+                            <div class="class_submit_R R_BR col-md-6">
+                                <ul>
+                                    <li class="mb27">
+                                        <div class="mb27">
+                                            <h3 class="suit_rg_m mb27">클래스 정보</h3>
+                                            <input
+                                                type="text"
+                                                placeholder="클래스명"
+                                                class="class_tit c_sub"
+                                            />
+                                        </div>
+                                        <select name="class_cate" id="class_cate c_sub">
+                                            <option value="" disabled selected>
+                                                카테고리
+                                            </option>
+                                            <option value="beginner_daily">
+                                                초급_일상회화
+                                            </option>
+                                            <option value="intermediate_daily">
+                                                중급_일상회화
+                                            </option>
+                                            <option value="advanced_daily">
+                                                고급_일상회화
+                                            </option>
+                                            <option value="beginner_Travel">
+                                                초급_여행회화
+                                            </option>
+                                            <option value="intermediate_Travel">
+                                                중급_여행회화
+                                            </option>
+                                            <option value="advanced_Travel">
+                                                고급_여행회화
+                                            </option>
+                                            <option value="beginner_business">
+                                                초급_비지니스회화
+                                            </option>
+                                            <option value="intermediate_business">
+                                                중급_비지니스회화
+                                            </option>
+                                            <option value="advanced_business">
+                                                고급_비니지스회화
+                                            </option>
+                                            <option value="beginner_SNS">
+                                                초급_SNS회화
+                                            </option>
+                                            <option value="intermediate_SNS">
+                                                중급_SNS회화
+                                            </option>
+                                            <option value="advanced_SNS">
+                                                고급_SNS회화
+                                            </option>
+                                        </select>
                                     </li>
                                     <li>
-                                        <input type="text" name="" id="" />
+                                        <h3 class="suit_rg_m mb27">강좌소개</h3>
+                                        <div>
+                                            <textarea id="tiny"></textarea>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="class_submit_R R_BR col-md-6">
-                            <ul>
-                                <li>
-                                    <div>
-                                        <h3>클래스 정보</h3>
-                                        <input
-                                            type="text"
-                                            placeholder="클래스명"
-                                        />
-                                    </div>
-                                    <select name="class_cate" id="class_cate">
-                                        <option value="" disabled selected>
-                                            카테고리
-                                        </option>
-                                        <option value="beginner_daily">
-                                            초급_일상회화
-                                        </option>
-                                        <option value="intermediate_daily">
-                                            중급_일상회화
-                                        </option>
-                                        <option value="advanced_daily">
-                                            고급_일상회화
-                                        </option>
-                                        <option value="beginner_Travel">
-                                            초급_여행회화
-                                        </option>
-                                        <option value="intermediate_Travel">
-                                            중급_여행회화
-                                        </option>
-                                        <option value="advanced_Travel">
-                                            고급_여행회화
-                                        </option>
-                                        <option value="beginner_business">
-                                            초급_비지니스회화
-                                        </option>
-                                        <option value="intermediate_business">
-                                            중급_비지니스회화
-                                        </option>
-                                        <option value="advanced_business">
-                                            고급_비니지스회화
-                                        </option>
-                                        <option value="beginner_SNS">
-                                            초급_SNS회화
-                                        </option>
-                                        <option value="intermediate_SNS">
-                                            중급_SNS회화
-                                        </option>
-                                        <option value="advanced_SNS">
-                                            고급_SNS회화
-                                        </option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <h3>강좌소개</h3>
-                                    <div>
-                                        <textarea id="tiny"></textarea>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="c_submit_btns d-flex justify-content-end">
+                            <button class="btn_s"><a href="/class_main.html">등록</a></button>
+                            <button class="btn_s"><a href="/class_main.html">취소</a></button>
                         </div>
-                    </div>
-                    .
+                    </form>
                 </section>
             </div>
         </div>
