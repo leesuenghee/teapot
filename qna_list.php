@@ -1,3 +1,29 @@
+<?php 
+    include $_SERVER['DOCUMENT_ROOT']."/teapot/inc/db.php";
+
+    /* PAGENATION */
+    if(isset($_GET['page'])){
+      $page = $_GET['page'];
+    } else {
+        $page = 1;
+    }
+    $pagesql = "SELECT COUNT(*) as qidx from lms_qna";
+    $page_result = $mysqli->query($pagesql);
+    $page_row = $page_result->fetch_assoc();
+    $row_num = $page_row['qidx']; //전체 게시물 수
+
+    $list = 5; //페이지당 출력할 게시물 수
+    $block_ct = 5;
+    $block_num = ceil($page/$block_ct);//page9,  9/5 1.2 2
+    $block_start = (($block_num -1)*$block_ct) + 1;//page6 start 6
+    $block_end = $block_start + $block_ct -1; //start 1, end 5
+
+    $total_page = ceil($row_num/$list); //총42, 42/5
+    if($block_end > $total_page) $block_end = $total_page;
+    $total_block = ceil($total_page/$block_ct);//총32, 2
+
+    $start_num = ($page -1) * $list;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,6 +56,12 @@
     <link rel="stylesheet" href="../css/qna_list.css" />
   </head>
   <body>
+    <?php
+      $qidx = $_GET['qidx'];
+      $sql = "SELECT * FROM lms_qna WHERE qidx='{$qidx}'";
+      $result = $mysqli->query($sql);
+      $row = $result -> fetch_assoc();
+    ?>
     <div id="dashboard">
       <div class="background d-flex flex-column row">
         <div class="col-md-2">
@@ -96,11 +128,11 @@
             </thead>
             <tbody class="table-group-divider suit_rg_m">
               <tr>
-                <td>전치사 관련 질문입니다.</td>
-                <td>happyna97</td>
-                <td>2023.03.16</td>
+                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['userid']; ?></td>
+                <td><?php echo $row['date']; ?></td>
                 <td>
-                  <div class="reply_status answer_wait">답변대기</div>
+                  <div class="reply_status answer_wait">답변대기</div><!-- 답변대기 변수 잡아야 하는가?-->
                 </td>
                 <td>
                   <button
@@ -112,7 +144,7 @@
                   </button>
                 </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>일반동사 의문문에 대한 질문입니다.</td>
                 <td>안빠져요</td>
                 <td>2023.03.16</td>
@@ -179,18 +211,38 @@
                     바로가기
                   </button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
           <div class="pagination">
-            <ul
-              class="class_pg d-flex justify-content-center m54 align-items-center"
-            >
+            <ul class="class_pg d-flex justify-content-center m54 align-items-center">
+              <?php
+                    if($page>1){
+                      if($block_num > 1){
+                          $prev = ($block_num-2)*$list + 1;
+                          echo "<li><a href='?page=$prev' class='button suit_bold_m'><i class="fa-solid fa-angles-left"></i></a></li>";
+                      }
+                  }
+
+                  for($i=$block_start;$i<=$block_end;$i++){
+                      if($page == $i){
+                          echo "<li><a href='?page=$i' class='active'>$i</a></li>";
+                      }else{
+                          echo "<li><a href='?page=$i'>$i</a></li>";
+                      }
+                  }
+
+                  if($page<$total_page){
+                      if($total_block > $block_num){
+                          $next = $block_num*$list + 1;
+                          echo "<li><a href='?page=$next' class='button suit_bold_m'><i class="fa-solid fa-angles-right"></i></a></li>";
+                      }
+                  }
+              ?>
               <li>
                 <a class="suit_bold_m" href=""
-                  ><i class="fa-solid fa-angles-left"></i
-                ></a>
+                  ><i class="fa-solid fa-angles-left"></i></a>
               </li>
               <li>
                 <a class="suit_bold_m PG_num click" href="">1</a>
