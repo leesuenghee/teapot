@@ -57,7 +57,7 @@ a {
 
 /* class 전체 */
 section.align-self-center {
-    transform: translateY(10%);
+    transform: translateY(5%);
     box-sizing: border-box;
     padding-left: 3rem;
 }
@@ -150,7 +150,8 @@ select option[value=""][disabled] {
 .class_submit_L > .R_BR {
     width: 100%;
     box-sizing: border-box;
-    padding: 57px 64px;
+    padding: 54px 54px;
+    height: max-content;
 }
 
 /* 클래스 등록 버튼*/
@@ -226,6 +227,7 @@ input[type="radio"]{
     border: 1px solid var(--fontColor-g);
     right: 0;
     top: 0;
+    border-radius: 0;
 }
 .class_price li:last-child{
     position: relative;
@@ -246,6 +248,13 @@ input[type="radio"]{
     background: var(--fontColor-w);
     border-radius: 5px;
 }
-.class_cate{
+#class_cate{
     width: 302px;
+    border-radius: 5px;
+}
+option[value=""]:after{
+    content:'f0d7';
+    display: inline-block;
+    color: var(--point);
+    font-size: 18px;
 }
