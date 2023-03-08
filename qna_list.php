@@ -1,6 +1,7 @@
 <?php 
     include $_SERVER['DOCUMENT_ROOT']."/teapot/inc/db.php";
     include $_SERVER['DOCUMENT_ROOT']."/teapot/inc/admin_header.php";
+    // include $_SERVER['DOCUMENT_ROOT']."/teapot/inc/admin_aside.php";
 ?>
     <link rel="stylesheet" href="../css/qna_list.css" />
     <?php
