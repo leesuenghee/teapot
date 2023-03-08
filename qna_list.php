@@ -39,7 +39,32 @@
       $sql = "SELECT * FROM lms_qna WHERE qidx='{$qidx}'";
       $result = $mysqli->query($sql);
       $row = $result -> fetch_assoc();
+
+      // Pagenation
+      if(isset($_GET['page'])){
+          $page = $_GET['page'];
+      } else {
+          $page = 1;
+      }
+      $pagesql = "SELECT COUNT(*) as qidx from lms_qna";
+      $page_result = $mysqli->query($pagesql);
+      $page_row = $page_result->fetch_assoc();
+      //print_r($page_row['qidx']);
+      $row_num = $page_row['qidx']; //전체 게시물 수
+
+      $list = 5; //페이지당 출력할 게시물 수
+      $block_ct = 5;
+      $block_num = ceil($page/$block_ct);//page9,  9/5 1.2 2
+      $block_start = (($block_num -1)*$block_ct) + 1;//page6 start 6
+      $block_end = $block_start + $block_ct -1; //start 1, end 5
+
+      $total_page = ceil($row_num/$list); //총42, 42/5
+      if($block_end > $total_page) $block_end = $total_page;
+      $total_block = ceil($total_page/$block_ct);//총32, 2
+
+      $start_num = ($page -1) * $list;
     ?>
+    
     <div id="dashboard">
       <div class="background d-flex flex-column row">
         <div class="col-md-2">
@@ -141,7 +166,38 @@
 
           <div class="pagination">
             <ul class="class_pg d-flex justify-content-center m54 align-items-center">
-              <li>
+              <?php
+                if($page>1){
+                  if($block_num > 1){
+                      $prev = ($block_num-2)*$list + 1;
+                      echo "<li>
+                        <a class='suit_bold_m' href=''>
+                          <i class='fa-solid fa-angles-left'></i>
+                        </a>
+                      </li>";
+                  }
+                }
+
+                for($i=$block_start;$i<=$block_end;$i++){
+                  if($page == $i){
+                      echo "<li><a href='?page=$i' class='suit_bold_m PG_num active click'>$i</a></li>";
+                  }else{
+                      echo "<li><a href='?page=$i'>$i</a></li>";
+                  }
+                }
+                
+                if($page<$total_page){
+                  if($total_block > $block_num){
+                      $next = $block_num*$list + 1;
+                      echo "<li>
+                        <a class='suit_bold_m' href=''>
+                          <i class='fa-solid fa-angles-right'></i>
+                        </a>
+                      </li>";
+                  }
+                }
+              ?>
+              <!-- <li>
                 <a class="suit_bold_m" href=""
                   ><i class="fa-solid fa-angles-left"></i></a>
               </li>
@@ -164,7 +220,7 @@
                 <a class="suit_bold_m" href=""
                   ><i class="fa-solid fa-angles-right"></i
                 ></a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </main>
