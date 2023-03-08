@@ -132,16 +132,23 @@
             </thead>
             <tbody class="table-group-divider suit_rg_m">
               <?php
-                $sql = "SELECT * FROM lms_qna ORDER BY reply_st asc limit $start_num,$list";
+                $sql = "SELECT * FROM lms_qna ORDER BY reply_st,regdate asc limit $start_num,$list";
                 $result = $mysqli->query($sql) or die("query error => ".$mysqli->error);
                 while($rs = $result->fetch_object()){
                     $rsc[]=$rs;
                 }
+                
                 if(isset($rsc)){ 
                   foreach($rsc as $r){
               ?>
               <tr>
-                <td><?php echo $r->qna_title;?></td>
+                <td>
+                  <?php
+                      if(iconv_strlen($r->qna_title) > 10){
+                        echo str_replace($r->qna_title,iconv_substr($r->qna_title, 0, 10)."...",$r->qna_title);
+                    } 
+                  ?>
+                </td>
                 <td><?php echo $r->userid;?></td>
                 <td><?php echo $r->regdate;?></td>
                 <td>
@@ -172,7 +179,7 @@
                   if($block_num > 1){
                       $prev = ($block_num-2)*$list + 1;
                       echo "<li>
-                        <a class='suit_bold_m' href=''>
+                        <a class='suit_bold_m' href='?page=$prev'>
                           <i class='fa-solid fa-angles-left'></i>
                         </a>
                       </li>";
@@ -193,7 +200,7 @@
                   if($total_block > $block_num){
                       $next = $block_num*$list + 1;
                       echo "<li>
-                        <a class='suit_bold_m' href=''>
+                        <a class='suit_bold_m' href='?page=$next'>
                           <i class='fa-solid fa-angles-right'></i>
                         </a>
                       </li>";
