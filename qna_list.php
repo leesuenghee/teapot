@@ -63,6 +63,7 @@
       $total_block = ceil($total_page/$block_ct);//총32, 2
 
       $start_num = ($page -1) * $list;
+      // echo ($start_num);
     ?>
     
     <div id="dashboard">
@@ -131,7 +132,7 @@
             </thead>
             <tbody class="table-group-divider suit_rg_m">
               <?php
-                $sql = "SELECT * FROM lms_qna ORDER BY reply_st asc limit 0,5";
+                $sql = "SELECT * FROM lms_qna ORDER BY reply_st asc limit $start_num,$list";
                 $result = $mysqli->query($sql) or die("query error => ".$mysqli->error);
                 while($rs = $result->fetch_object()){
                     $rsc[]=$rs;
@@ -178,14 +179,16 @@
                   }
                 }
 
+
                 for($i=$block_start;$i<=$block_end;$i++){
                   if($page == $i){
                       echo "<li><a href='?page=$i' class='suit_bold_m PG_num active click'>$i</a></li>";
                   }else{
-                      echo "<li><a href='?page=$i'>$i</a></li>";
+                      echo "<li><a href='?page=$i' class='suit_bold_m PG_num'>$i</a></li>";
                   }
                 }
                 
+
                 if($page<$total_page){
                   if($total_block > $block_num){
                       $next = $block_num*$list + 1;

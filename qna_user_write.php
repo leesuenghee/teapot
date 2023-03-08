@@ -39,7 +39,7 @@
             <div class="field">
                 <label for="subject">제목:</label>
                 <input type="text" id="subject" name="title" required placeholder="Title">
-            </div>9
+            </div>
             <div class="field">
                 <label for="usermsg">내용:</label>
                 <textarea name="content" id="usermsg" cols="30" rows="10"></textarea>
