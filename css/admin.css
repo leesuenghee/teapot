@@ -1,22 +1,5 @@
-
-* {
-  font-family: "SUIT", sans-serif;
-}
-:root {
-  --point: #ff3d34;
-  --primary: #ff534b;
-  --secondary: #ff6b65;
-  --background: #fcf6f6;
-  --fontColor-b: #090504;
-  --fontColor-w: #ffffff;
-}
-body {
-  background-color: var(--background);
-}
-
 #dashboard {
   width: 100%;
-  position: relative;
   height: auto;
 }
 .background {
@@ -25,9 +8,10 @@ body {
   height: 890px;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-  /* position: absolute; */
-  margin: 54px auto;
-  position: relative;
+  margin: 20px auto 0;
+}
+#dashboard .background .col-md-2 {
+  padding-left: 0;
 }
 .m-bg {
   width: 268px;
@@ -35,37 +19,47 @@ body {
   background-color: var(--primary);
   border-radius: 20px;
   position: relative;
-  /* bottom: 0; */
-  /* text-align: left; */
   margin-top: 0;
 }
-#dashboard .background .col-2 {
-  padding-left: 0;
-}
-
 .logo {
-  margin: 13px 0 12px 47.5px;
+  margin: 13px 0 13px 47.5px;
 }
-
 .m-dash {
+  width: 100%;
   padding-top: 30px;
   gap: 2rem;
+  padding-left: 0;
+  position: relative;
 }
 .m-dash > li {
   padding-left: 55px;
+  position: relative;
   line-height: 35px;
 }
 .m-dash > li a {
   color: var(--background);
+  text-decoration: none;
 }
-.m-dash > li.clicks {
+.m-dash > li.clicks::before {
+  content: "";
   background-color: var(--fontColor-w);
   line-height: 35px;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 268px;
+  height: 40px;
 }
 .m-dash > li.clicks a {
   color: var(--primary);
+  position: relative;
+  z-index: 1;
 }
-
 .m-main li {
   margin-bottom: 27px;
   line-height: 40px;
@@ -75,12 +69,14 @@ body {
   color: var(--fontColor-w);
 }
 .m-dash > li a i,
-.m-dash > li a ion-icon {
-  margin-left: 20px;
+.m-dash > li a {
+  margin-left: 10px;
 }
-
+.bi {
+  transform: rotate(20deg);
+  display: inline-block;
+}
 .profile {
-  position: absolute;
   bottom: 81px;
   width: 235px;
   height: 219px;
@@ -88,23 +84,29 @@ body {
   border-radius: 25px;
   left: 16px;
   line-height: 27px;
-  /* margin-top: 100px; */
 }
 .profile div {
   text-align: center;
 }
-
+.profileimg {
+  width: 95px;
+  height: 95px;
+  display: inline-block;
+  border-radius: 50%;
+}
 .profile img {
-  padding: 20px 0;
-}
-
-.logout a {
-  position: absolute;
-  bottom: 27px;
-  text-align: center;
+  /* padding: 20px 0; */
+  object-fit: cover;
   width: 100%;
+  height: 100%;
 }
-.logout i {
+.logout button {
+  bottom: 27px;
+  width: 100%;
+  border: none;
+  background: none;
+  color: var(--fontColor-w);
+}
+.logout button i {
   margin-left: 10px;
 }
-

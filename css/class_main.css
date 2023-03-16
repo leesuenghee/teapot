@@ -1,5 +1,5 @@
 /* class 공통 */
-:root{
+:root {
     --fontColor-g: #7d7d7d;
 }
 input,
@@ -23,11 +23,14 @@ input:focus {
 .m54 {
     margin: 54px 0px;
 }
-.mb27{
+.mb27 {
     margin-bottom: 27px;
 }
 .mb54 {
     margin-bottom: 54px;
+}
+.mbt54 {
+    margin: -54px 0 27px;
 }
 a {
     color: var(--fontColor-b);
@@ -39,12 +42,15 @@ a {
 }
 .btn_l:hover a,
 .btn_m:hover a,
-.btn_s:hover a{
+.btn_s:hover a {
     color: var(--fontColor-w);
 }
 .btn_m {
     line-height: 40px;
     text-align: center;
+}
+.background > div.col-2 {
+    padding-left: 0;
 }
 .categorys > ul > li {
     background-color: var(--fontColor-w);
@@ -66,7 +72,6 @@ section.align-self-center {
 .class_R_top {
     gap: 30px;
     justify-content: flex-end;
-    margin-right: 141px;
 }
 ul.class_R_top {
     gap: 15px;
@@ -75,7 +80,14 @@ ul.class_R_top li.select_list {
     cursor: pointer;
 }
 
-/* /class 관리 상단부 */
+.submit_upper {
+    margin-bottom: 27px;
+    gap: 30px;
+}
+.searchs > .btn {
+    top: 20%;
+    right: 0%;
+}
 
 /* class 관리 중단부 */
 .class_mid > ul {
@@ -90,6 +102,14 @@ ul.class_R_top li.select_list {
     box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
     border-radius: 25px;
     background: #fff;
+}
+.class_row .thubnail {
+    width: 262px;
+}
+.class_row .thubnail img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
 }
 
 /* class tit */
@@ -108,6 +128,7 @@ ul.class_R_top li.select_list {
     height: 15px;
     background-color: var(--point);
     border-radius: 25px;
+    transform: translateY(33%);
 }
 .class_rate li {
     gap: 15px;
@@ -126,7 +147,7 @@ ul.class_R_top li.select_list {
 /* class btn */
 .txt_bot > .class_btn {
     gap: 30px;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
 }
 /* /class 관리 중단부 */
@@ -139,79 +160,105 @@ ul.class_R_top li.select_list {
 .class_submit_L {
     width: 597px;
     gap: 78px;
-
 }
 
 /* 클래스 정보 작성 */
 select option[value=""][disabled] {
     display: none;
 }
-
 .class_submit_L > .R_BR {
     width: 100%;
     box-sizing: border-box;
     padding: 54px 54px;
     height: max-content;
 }
+.class_submit_L > .class_modi {
+    padding: 33px 54px 39px;
+}
 
 /* 클래스 등록 버튼*/
-.c_submit_btns{
+.c_submit_btns {
     gap: 30px;
     margin-right: 4.75rem;
 }
-.DND{
+.DND {
     position: relative;
 }
-.img_DND{
+.img_DND {
     box-sizing: border-box;
     /* position: absolute; */
     width: 469px;
     height: 213px;
     /* left: 547px;
-    top: 309px; */
-    background: #FCF6F6;
-    border: 3px dashed #FF534B;
+        top: 309px; */
+    background: #fcf6f6;
+    border: 3px dashed #ff534b;
     border-radius: 25px;
     margin: 0;
 }
-.img_DND > i.fa-image{
+.img_DND > .box > i.fa-image {
     color: var(--point);
     transform: translateY(50%);
     font-size: 3.7rem;
 }
+#box.drag-over {
+    background: #3498db;
+    color: #ccc;
+}
+/* #box > label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+} */
+.box > p {
+    margin-top: 27px;
+}
+#thumbnail {
+    display: none;
+}
+.thumb {
+    display: flex;
+    gap: 10px;
+}
+.thumb .thumbIMG {
+    width: 20%;
+}
+.thumb .thumbIMG img {
+    width: 100%;
+}
 
 /* 가격 */
-.class_price{
+.class_price {
     gap: 30px;
 }
-.class_price li{
+.class_price li {
     width: 50%;
 }
-.class_price li:first-child{
+.class_price li:first-child {
     width: 181px;
     background: var(--fontColor-w);
     border: 1px solid var(--primary);
     border-radius: 5px;
     line-height: 54px;
 }
-.class_price > li.d-flex >label:first-of-type{
-    border-right: 1px solid  var(--primary); 
+.class_price > li.d-flex > label:first-of-type {
+    border-right: 1px solid var(--primary);
 }
-.classprice.R_BR{
+.classprice.R_BR {
     padding: 27px;
 }
-input[type="radio"]{
+input[type="radio"] {
     display: none;
 }
-.price_btn{
+.price_btn {
     text-align: center;
     width: 100%;
 }
-.price_btn.click{
+input[type="radio"]:checked + .price_btn {
     color: var(--fontColor-w);
     background: var(--point);
 }
-.price_C_G{
+.price_C_G {
     color: var(--fontColor-g);
     z-index: 3;
     position: absolute;
@@ -219,7 +266,8 @@ input[type="radio"]{
     top: 40%;
     right: 5%;
 }
-.class_p_txt{
+
+.class_p_txt {
     position: absolute;
     width: 182px;
     line-height: 54px;
@@ -229,32 +277,102 @@ input[type="radio"]{
     top: 0;
     border-radius: 0;
 }
-.class_price li:last-child{
+.class_price li:last-child {
     position: relative;
 }
 
-
 /* 클래스 정보 */
-.class_submit_R{
+.class_submit_R {
     box-sizing: border-box;
     padding: 27px;
 }
-.c_sub{
-    height: 54px;
-    filter: drop-shadow(0px 0px 2px var(--primary));
+.class_submit_R > ul {
+    padding: 0 40px;
 }
-.class_tit{
+.c_sub {
+    height: 54px;
+    filter: drop-shadow(0px 0px 2px #ffbebb);
+}
+.class_tit {
     width: 443px;
     background: var(--fontColor-w);
     border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 20px 0px;
+    line-height: 54px;
+    font-size: 24px;
 }
-#class_cate{
+input.class_tit::placeholder,
+#class_cate,
+#class_cate_type {
+    font-size: 24px;
+    color: #7d7d7d;
+}
+#class_cate,
+#class_cate_type {
     width: 302px;
     border-radius: 5px;
+    padding-left: 22px;
 }
-option[value=""]:after{
-    content:'f0d7';
+
+option[value=""]:after {
+    content: "f0d7";
     display: inline-block;
     color: var(--point);
     font-size: 18px;
+}
+.select_wrap {
+    position: relative;
+    /* gap:30px; */
+}
+.select_wrap > select#class_cate {
+    width: 150px;
+}
+.class_submit_R .select_wrap i,
+.cls_cate_tit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--point);
+    font-size: 24px;
+}
+.select_wrap #class_cate_type {
+    width: 275px;
+}
+.cls_type_i {
+    left: 50%;
+}
+.select_wrap .cls_cate_tit {
+    right: 15%;
+}
+
+/* Tiny editor */
+.tox.tox-tinymce {
+    border: 2px solid #ffbebb;
+    border-radius: 10px;
+}
+
+.tox:not(.tox-tinymce-inline) div.tox-editor-header {
+    box-shadow: none;
+    border-bottom: 2px solid #ffbebb;
+}
+
+/* 클래스 수정 정보 */
+.class_modify_img {
+    width: 414px;
+    margin: 0 auto;
+}
+
+.c_submit_btns div.btn_s,
+.c_submit_btns a.btn_s {
+    text-align: center;
+    line-height: 40px;
+}
+
+#thumbnails .thumb {
+    transform: translateY(-10%);
+    width: 387px;
+}
+#thumbnails .thumb > img {
+    width: 100%;
 }
