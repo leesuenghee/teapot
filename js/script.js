@@ -7,7 +7,7 @@ $(".category a").click(function (e) {
   categorys.slideToggle();
 });
 
-dashMenu.click(function (e){
+dashMenu.click(function (e) {
   e.preventDefault();
   dashMenu.removeClass("clicks");
   $(this).toggleClass("clicks");
